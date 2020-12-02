@@ -32,11 +32,11 @@ perfil = ctrl.Consequent(np.arange(0,7,1),'FamiliaConforto')
 perfil.automf(names=['Definitivamente não','Acho que não','Mais ou menos', 'Gostaria de tentar','Sim, quero muito'])
 
 #Variaveis assumindo valores 
-aventura_familia['Definitivamente não'] = fuzz.trimf(aventura_familia.universe,[0,0,2])
-aventura_familia['Acho que não'] = fuzz.trimf(aventura_familia.universe,[0,1,3])
-aventura_familia['Mais ou menos'] = fuzz.trimf(aventura_familia.universe,[1,2,4])
-aventura_familia['Gostaria de tentar'] = fuzz.trimf(aventura_familia.universe,[2,3,5])
-aventura_familia['Sim, quero muito'] = fuzz.trimf(aventura_familia.universe,[3,4,6])
+aventura_familia['Definitivamente não'] = fuzz.trimf(aventura_familia.universe,[0,1,1])
+aventura_familia['Acho que não'] = fuzz.trimf(aventura_familia.universe,[1,2,3])
+aventura_familia['Mais ou menos'] = fuzz.trimf(aventura_familia.universe,[2,3,4])
+aventura_familia['Gostaria de tentar'] = fuzz.trimf(aventura_familia.universe,[3,4,5])
+aventura_familia['Sim, quero muito'] = fuzz.trimf(aventura_familia.universe,[5,5,6])
 
 #vizualizando
 aventura_familia.view()
