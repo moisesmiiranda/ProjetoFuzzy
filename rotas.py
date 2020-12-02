@@ -23,30 +23,20 @@ familia = ctrl.Antecedent(np.arange(0,6,1),'Familia')
 religioso = ctrl.Antecedent(np.arange(0,6,1),'Religioso')
 conforto = ctrl.Antecedent(np.arange(0,6,1),'Conforto')
 
-perfil = ctrl.Consequent(np.arange(0,10,1),'perfil')
-
-perfil.automf(names=['Aventureiro','Conforto','Família','Religioso','Romântico','AventuraFamilia','AventuraFamiliaRomantico','FamiliaHistoricoReligioso','FamiliaConforto'])
+#perfil.automf(names=['Aventureiro','Conforto','Família','Religioso','Romântico','AventuraFamilia','AventuraFamiliaRomantico','FamiliaHistoricoReligioso','FamiliaConforto'])
 #SAÍDAS
-perfil['Aventureiro'] = ctrl.Consequent(np.arange(0,6,1),'Aventureiro')
-perfil['Conforto'] = ctrl.Consequent(np.arange(0,6,1),'Conforto')
-perfil['Família'] = ctrl.Consequent(np.arange(0,6,1),'Família')
-perfil['Religioso'] = ctrl.Consequent(np.arange(0,6,1),'Religioso')
-perfil['Romântico'] = ctrl.Consequent(np.arange(0,6,1),'Romântico')
-perfil['AventuraFamilia'] = ctrl.Consequent(np.arange(0,6,1),'AventuraFamilia')
-perfil['AventuraFamiliaRomantico'] = ctrl.Consequent(np.arange(0,6,1),'AventuraFamiliaRomantico')
-perfil['FamiliaHistoricoReligioso'] = ctrl.Consequent(np.arange(0,6,1),'FamiliaHistoricoReligioso')
-perfil['FamiliaConforto'] = ctrl.Consequent(np.arange(0,6,1),'FamiliaConforto')
+perfil = ctrl.Consequent(np.arange(0,6,1),'Aventureiro')
+perfil = ctrl.Consequent(np.arange(0,6,1),'Conforto')
+perfil = ctrl.Consequent(np.arange(0,6,1),'Família')
+perfil = ctrl.Consequent(np.arange(0,6,1),'Religioso')
+perfil = ctrl.Consequent(np.arange(0,6,1),'Romântico')
+perfil = ctrl.Consequent(np.arange(0,6,1),'AventuraFamilia')
+perfil = ctrl.Consequent(np.arange(0,6,1),'AventuraFamiliaRomantico')
+perfil = ctrl.Consequent(np.arange(0,6,1),'FamiliaHistoricoReligioso')
+perfil = ctrl.Consequent(np.arange(0,6,1),'FamiliaConforto')
 
 #mapeando os valores difusos
-aventura_familia.automf(names=['Definitivamente não','Acho que não','Mais ou menos', 'Gostaria de tentar','Sim, quero muito'])
-aventura_familia_romantico.automf(names=['Definitivamente não','Acho que não','Mais ou menos', 'Gostaria de tentar','Sim, quero muito'])
-aventura.automf(names=['Definitivamente não','Acho que não','Mais ou menos', 'Gostaria de tentar','Sim, quero muito'])
-familia_historico_religioso.automf(names=['Definitivamente não','Acho que não','Mais ou menos', 'Gostaria de tentar','Sim, quero muito'])
-familia_conforto.automf(names=['Definitivamente não','Acho que não','Mais ou menos', 'Gostaria de tentar','Sim, quero muito'])
-romantico.automf(names=['Definitivamente não','Acho que não','Mais ou menos', 'Gostaria de tentar','Sim, quero muito'])
-familia.automf(names=['Definitivamente não','Acho que não','Mais ou menos', 'Gostaria de tentar','Sim, quero muito'])
-religioso.automf(names=['Definitivamente não','Acho que não','Mais ou menos', 'Gostaria de tentar','Sim, quero muito'])
-conforto.automf(names=['Definitivamente não','Acho que não','Mais ou menos', 'Gostaria de tentar','Sim, quero muito'])
+perfil.automf(names=['Definitivamente não','Acho que não','Mais ou menos', 'Gostaria de tentar','Sim, quero muito'])
 
 #Variaveis assumindo valores 
 aventura_familia['Definitivamente não'] = fuzz.trimf(aventura_familia.universe,[0,0,1])
@@ -104,7 +94,14 @@ conforto['Gostaria de tentar'] = fuzz.trimf(aventura_familia.universe,[0,3,4])
 conforto['Sim, quero muito'] = fuzz.trimf(aventura_familia.universe,[0,4,5])
 #vizualizando
 aventura_familia.view()
-
+#aventura_familia_romantico.view()
+#aventura.view()
+#familia_historico_religioso.view()
+#familia_conforto.view()
+#romantico.view()
+#familia.view()
+#religioso.view()
+#conforto.view()
 #-=-=-=-=-=--=-=-=-=-=--=-=-=-=-=--=-=-=-=-=--=-=-=-=-=--=-=-=-=-=--=-=-=-=-=--=-=-=-=-=--=-=-=-=-=--=-=-=-=-=--=-=-=-=-=--=-=-=-=-=--=-=-=-=-=-
 #REGRAS
 
